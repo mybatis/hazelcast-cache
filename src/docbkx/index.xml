@@ -77,8 +77,9 @@
     ...
 
 </mapper>]]></programlisting>
-            <para>Please refer to the official Hazelcast <ulink url="http://code.google.com/docreader/#p=hazelcast&amp;s=hazelcast&amp;t=Introduction">documentation</ulink>
-            to know more details about the configuration.</para>
+            <para>Please refer to the official Hazelcast Near Cache
+            <ulink url="http://www.hazelcast.com/documentation.jsp#MapNearCache">documentation</ulink>
+            to know more details how to configure Hazelcast as Cache.</para>
         </section>
     </chapter>
 
