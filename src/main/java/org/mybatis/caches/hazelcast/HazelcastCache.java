@@ -51,6 +51,9 @@ public final class HazelcastCache implements Cache {
      * @param id the cache id.
      */
     public HazelcastCache(String id) {
+        if (id == null) {
+            throw new IllegalArgumentException("Cache instances require an ID");
+        }
         this.id = id;
         this.cacheMap = Hazelcast.getMap(this.id);
     }
