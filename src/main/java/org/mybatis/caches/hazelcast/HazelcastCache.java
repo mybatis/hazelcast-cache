@@ -107,6 +107,9 @@ public final class HazelcastCache implements Cache {
         return this.cacheMap.remove(key.hashCode());
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -123,11 +126,17 @@ public final class HazelcastCache implements Cache {
         return this.id.equals(otherCache.getId());
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public int hashCode() {
         return this.id.hashCode();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String toString() {
         return "Hazelcast {"
