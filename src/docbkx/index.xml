@@ -50,7 +50,8 @@
             <title>How to</title>
             <para><ulink url="http://www.hazelcast.com/">Hazelcast</ulink> is an open source clustering and highly scalable data distribution
   platform for Java.</para>
-            <para>Users that want to use Hazelcast into their applications, first have to add in
+            <para>Users that want to use Hazelcast into their applications, have to download the zip <ulink url="http://code.google.com/p/mybatis/downloads/detail?name=<?eval ${project.artifactId}?>-<?eval ${project.version}?>-bundle.zip">bundle</ulink>, decompress it and add the jars in the classpath;
+            Apache Maven users instead can simply add in
             the <literal>pom.xml</literal> the following dependency:</para>
             <programlisting language="xml"><![CDATA[<dependencies>
     ...
