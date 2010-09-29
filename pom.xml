@@ -33,6 +33,10 @@
     <name>MyBatis Caches :: Hazelcast</name>
     <description>Hazelcast support for MyBatis Cache</description>
 
+    <properties>
+        <findbugs.onlyAnalyze>org.mybatis.caches.hazelcast.*</findbugs.onlyAnalyze>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.hazelcast</groupId>
