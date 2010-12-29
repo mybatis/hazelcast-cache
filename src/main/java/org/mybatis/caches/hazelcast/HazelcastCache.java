@@ -31,7 +31,7 @@ import com.hazelcast.core.Hazelcast;
 public final class HazelcastCache implements Cache {
 
     /**
-     * The {@link ReadWriteLock}.
+     * The {@code ReadWriteLock}.
      */
     private final ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
 

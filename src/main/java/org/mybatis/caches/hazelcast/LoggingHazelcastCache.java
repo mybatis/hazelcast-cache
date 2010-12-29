@@ -18,7 +18,7 @@ package org.mybatis.caches.hazelcast;
 import org.apache.ibatis.cache.decorators.LoggingCache;
 
 /**
- * {@link LoggingCache} adapter for Hazelcast.
+ * {@code LoggingCache} adapter for Hazelcast.
  *
  * @version $Id$
  */
