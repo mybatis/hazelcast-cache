@@ -30,7 +30,7 @@
     <artifactId>mybatis-hazelcast</artifactId>
     <packaging>jar</packaging>
     <name>MyBatis Caches :: Hazelcast</name>
-    <version>3-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <description>Hazelcast support for MyBatis Cache</description>
 
     <scm>
