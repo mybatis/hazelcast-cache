@@ -30,13 +30,13 @@
     <artifactId>mybatis-hazelcast</artifactId>
     <packaging>jar</packaging>
     <name>MyBatis Caches :: Hazelcast</name>
-    <version>2</version>
+    <version>3-SNAPSHOT</version>
     <description>Hazelcast support for MyBatis Cache</description>
 
     <scm>
-        <url>scm:svn:http://mybatis.googlecode.com/svn/sub-projects/caches/tags/mybatis-caches-parent-2/hazelcast</url>
-        <connection>scm:svn:https://mybatis.googlecode.com/svn/sub-projects/caches/tags/mybatis-caches-parent-2/hazelcast</connection>
-        <developerConnection>scm:svn:https://mybatis.googlecode.com/svn/sub-projects/caches/tags/mybatis-caches-parent-2/hazelcast</developerConnection>
+        <url>scm:svn:http://mybatis.googlecode.com/svn/sub-projects/caches/trunk/hazelcast</url>
+        <connection>scm:svn:https://mybatis.googlecode.com/svn/sub-projects/caches/trunk/hazelcast</connection>
+        <developerConnection>scm:svn:https://mybatis.googlecode.com/svn/sub-projects/caches/trunk/hazelcast</developerConnection>
     </scm>
 
     <properties>
