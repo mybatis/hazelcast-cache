@@ -27,6 +27,7 @@
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
+  <groupId>org.mybatis.caches</groupId>
   <artifactId>mybatis-hazelcast</artifactId>
   <packaging>jar</packaging>
   <name>MyBatis Caches :: Hazelcast</name>
