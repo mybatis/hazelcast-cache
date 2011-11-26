@@ -39,6 +39,13 @@
     <connection>scm:svn:https://mybatis.googlecode.com/svn/sub-projects/caches/trunk/hazelcast</connection>
     <developerConnection>scm:svn:https://mybatis.googlecode.com/svn/sub-projects/caches/trunk/hazelcast</developerConnection>
   </scm>
+  <distributionManagement>
+    <!-- Cannot define in parent ATM, see COMMONSSITE-26 -->
+    <site>
+      <id>mybatis.site</id>
+      <url>ftp://${mybatis.host}/caches/hazelcast</url>
+    </site>
+  </distributionManagement>
 
   <properties>
     <findbugs.onlyAnalyze>org.mybatis.caches.hazelcast.*</findbugs.onlyAnalyze>
