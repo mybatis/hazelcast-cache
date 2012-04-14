@@ -31,14 +31,14 @@
   <artifactId>mybatis-hazelcast</artifactId>
   <packaging>jar</packaging>
   <name>MyBatis Caches :: Hazelcast</name>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1</version>
   <description>Hazelcast support for MyBatis Cache</description>
   <url>http://www.mybatis.org/caches/hazelcast/${project.version}</url>
 
   <scm>
-    <url>scm:svn:http://mybatis.googlecode.com/svn/sub-projects/caches/trunk/hazelcast</url>
-    <connection>scm:svn:https://mybatis.googlecode.com/svn/sub-projects/caches/trunk/hazelcast</connection>
-    <developerConnection>scm:svn:https://mybatis.googlecode.com/svn/sub-projects/caches/trunk/hazelcast</developerConnection>
+    <url>scm:svn:http://mybatis.googlecode.com/svn/sub-projects/caches/tags/mybatis-hazelcast-1.0.1</url>
+    <connection>scm:svn:https://mybatis.googlecode.com/svn/sub-projects/caches/tags/mybatis-hazelcast-1.0.1</connection>
+    <developerConnection>scm:svn:https://mybatis.googlecode.com/svn/sub-projects/caches/tags/mybatis-hazelcast-1.0.1</developerConnection>
   </scm>
   <distributionManagement>
     <!-- Cannot define in parent ATM, see COMMONSSITE-26 -->
