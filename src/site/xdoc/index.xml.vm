@@ -28,7 +28,7 @@
   </properties>
 
   <body>
-    <section name="MyBatis EHCache integration - Reference Documentation">
+    <section name="MyBatis Hazelcast integration - Reference Documentation">
 
     <p><a href="http://www.hazelcast.com/">Hazelcast</a> is an open source clustering and highly scalable data distribution
   platform for Java.</p>
