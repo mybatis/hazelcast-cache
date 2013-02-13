@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Copyright 2010-2012 The MyBatis Team
+  Copyright 2010-2013 The MyBatis Team
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -14,45 +14,42 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-
-<!--
-  version: $Id$
--->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>org.mybatis</groupId>
     <artifactId>mybatis-parent</artifactId>
-    <version>15</version>
+    <version>17-SNAPSHOT</version>
   </parent>
 
-  <modelVersion>4.0.0</modelVersion>
   <groupId>org.mybatis.caches</groupId>
   <artifactId>mybatis-hazelcast</artifactId>
-  <packaging>jar</packaging>
-  <name>MyBatis Caches :: Hazelcast</name>
   <version>1.0.2-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>MyBatis Caches :: Hazelcast</name>
   <description>Hazelcast support for MyBatis Cache</description>
-  <url>http://www.mybatis.org/caches/hazelcast/${project.version}</url>
+  <url>http://www.mybatis.org/caches/hazelcast/</url>
 
   <scm>
-    <url>scm:svn:http://mybatis.googlecode.com/svn/sub-projects/caches/trunk/hazelcast</url>
-    <connection>scm:svn:https://mybatis.googlecode.com/svn/sub-projects/caches/trunk/hazelcast</connection>
-    <developerConnection>scm:svn:https://mybatis.googlecode.com/svn/sub-projects/caches/trunk/hazelcast</developerConnection>
+    <url>http://github.com/mybatis/hazelcast-cache</url>
+    <connection>scm:git:ssh://github.com/mybatis/hazelcast-cache.git</connection>
+    <developerConnection>scm:git:git+ssh://git@github.com/mybatis/hazelcast-cache.git</developerConnection>
+    <tag>HEAD</tag>
   </scm>
+  <issueManagement>
+    <system>GitHub Issue Management</system>
+    <url>https://github.com/mybatis/hazelcast-cache/issues</url>
+  </issueManagement>
+  <ciManagement>
+    <system>Travis CI</system>
+    <url>https://travis-ci.org/hazelcast-cache/guice</url>
+  </ciManagement>
   <distributionManagement>
-    <!-- Cannot define in parent ATM, see COMMONSSITE-26 -->
     <site>
-      <id>mybatis.site</id>
-      <!--
-       | make it overridible, FTP is terribly slow when launched from Maven Wagon
-       | an alternative strategy could be deploying the site locally
-       |
-       |    -Dsite.deploymentUrl=file://...
-       |
-       | then async redeploying it via Filezilla/whatelese
-      -->
-      <url>${site.deploymentUrl}</url>
+      <id>github</id>
+      <url>gitsite:git@github.com/mybatis/hazelcast-cache.git</url>
     </site>
   </distributionManagement>
 
@@ -60,10 +57,6 @@
     <findbugs.onlyAnalyze>org.mybatis.caches.hazelcast.*</findbugs.onlyAnalyze>
     <clirr.comparisonVersion>1.0.0-RC1</clirr.comparisonVersion>
     <gcu.product>Cache</gcu.product>
-    <!--
-     | see distributionManagement.site.url
-    -->
-    <site.deploymentUrl>ftp://${mybatis.host}/caches/hazelcast/</site.deploymentUrl>
   </properties>
 
   <dependencies>
