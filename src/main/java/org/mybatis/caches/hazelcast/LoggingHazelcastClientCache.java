@@ -15,22 +15,17 @@
  */
 package org.mybatis.caches.hazelcast;
 
-import org.mybatis.caches.hazelcast.AbstractHazelcastCache;
-import org.mybatis.caches.hazelcast.HazelcastInstance;
+import org.apache.ibatis.cache.decorators.LoggingCache;
 
 /**
- * Cache adapter for Hazelcast.
+ * {@code LoggingCache} adapter for HazelcastClientCache.
  *
  * @version $Id$
  */
-public final class HazelcastCache extends AbstractHazelcastCache {
+public final class LoggingHazelcastClientCache extends LoggingCache {
 
-    /**
-     * Instantiates a new Hazelcast cache for the specified id.
-     *
-     * @param id the cache id.
-     */
-    public HazelcastCache(String id) {
-        super(id, HazelcastInstance.getInstance().<Integer, Object> getMap(id));
+    public LoggingHazelcastClientCache(final String id) {
+        super(new HazelcastClientCache(id));
     }
+
 }
