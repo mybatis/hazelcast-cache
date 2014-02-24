@@ -1,1 +1,17 @@
 Hazelcast support for MyBatis Cache
+
+This module contains two cache implementations utilizing Hazelcast: 
+
+
+1) org.mybatis.caches.hazelcast.HazelcastCache:
+
+Use "org.mybatis.caches.hazelcast.HazelcastCache" if you want the JVM running MyBatis to be part of the Hazelcast cache cluster.
+
+Internally this is calling "Hazelcast.newHazelcastInstance()".
+
+
+2) org.mybatis.caches.hazelcast.HazelcastClientCache:
+
+Use "org.mybatis.caches.hazelcast.HazelcastClientCache" if you want the JVM running MyBatis to be a client to a Hazelcast cache cluster running outside the JVM running MyBatis.
+
+Internally this is calling "HazelcastClient.newHazelcastClient()". Also see http://hazelcast.org/docs/latest/manual/html/nativeclient.html
