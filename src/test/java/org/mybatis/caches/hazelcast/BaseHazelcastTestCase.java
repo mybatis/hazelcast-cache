@@ -22,18 +22,11 @@ import static org.junit.Assert.assertNull;
 import org.apache.ibatis.cache.Cache;
 import org.junit.Test;
 
-/**
- * 
- *
- * @version $Id$
- */
-public final class HazelcastTestCase {
+abstract public class BaseHazelcastTestCase {
 
-    private static final String DEFAULT_ID = "Hazelcast";
+    protected static final String DEFAULT_ID = "Hazelcast";
 
-    private static Cache newCache() {
-        return new HazelcastCache(DEFAULT_ID);
-    }
+    protected abstract Cache newCache();
 
     @Test
     public void shouldDemonstrateHowAllObjectsAreKept() {

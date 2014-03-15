@@ -1,5 +1,5 @@
 /*
- *    Copyright 2010-2012 The MyBatis Team
+ *    Copyright 2010-2014 The MyBatis Team
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -15,22 +15,25 @@
  */
 package org.mybatis.caches.hazelcast;
 
-import org.mybatis.caches.hazelcast.AbstractHazelcastCache;
-import org.mybatis.caches.hazelcast.HazelcastInstance;
+import com.hazelcast.core.Hazelcast;
+import com.hazelcast.core.HazelcastInstance;
+
 
 /**
  * Cache adapter for Hazelcast.
  *
- * @version $Id$
+ * @author Eduardo Macarron
  */
 public final class HazelcastCache extends AbstractHazelcastCache {
 
+    private static final HazelcastInstance CACHE = Hazelcast.newHazelcastInstance();
+
     /**
-     * Instantiates a new Hazelcast cache for the specified id.
+     * Instantiates a new Hazelcast cache for the specified namespace.
      *
      * @param id the cache id.
      */
     public HazelcastCache(String id) {
-        super(id, HazelcastInstance.getInstance().<Integer, Object> getMap(id));
+        super(id, CACHE.getMap(id));
     }
 }

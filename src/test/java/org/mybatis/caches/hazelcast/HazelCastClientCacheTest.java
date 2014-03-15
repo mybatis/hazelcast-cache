@@ -1,5 +1,5 @@
 /*
- *    Copyright 2010-2014 The MyBatis Team
+ *    Copyright 2014 The MyBatis Team
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -15,17 +15,12 @@
  */
 package org.mybatis.caches.hazelcast;
 
-import org.apache.ibatis.cache.decorators.LoggingCache;
+import org.apache.ibatis.cache.Cache;
 
-/**
- * {@code LoggingCache} adapter for Hazelcast.
- *
- * @author Simone Tripodi
- */
-public final class LoggingHazelcastCache extends LoggingCache {
+public final class HazelCastClientCacheTest extends BaseHazelcastTestCase {
 
-    public LoggingHazelcastCache(final String id) {
-        super(new HazelcastCache(id));
+    protected Cache newCache() {
+        return new HazelcastCache(DEFAULT_ID);
     }
 
 }
