@@ -16,11 +16,17 @@
 package org.mybatis.caches.hazelcast;
 
 import org.apache.ibatis.cache.Cache;
+import org.junit.BeforeClass;
 
 public final class HazelCastClientCacheTest extends BaseHazelcastTestCase {
 
+    @BeforeClass
+    public static void setupClass() {
+        new HazelcastCache(DEFAULT_ID);
+    }
+
     protected Cache newCache() {
-        return new HazelcastCache(DEFAULT_ID);
+        return new HazelcastClientCache(DEFAULT_ID);
     }
 
 }
