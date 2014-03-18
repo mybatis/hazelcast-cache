@@ -69,7 +69,7 @@ public abstract class AbstractHazelcastCache implements Cache {
      * {@inheritDoc}
      */
     public Object getObject(Object key) {
-        return this.cacheMap.get(key.hashCode());
+        return this.cacheMap.get(key);
     }
 
     /**
@@ -90,14 +90,14 @@ public abstract class AbstractHazelcastCache implements Cache {
      * {@inheritDoc}
      */
     public void putObject(Object key, Object value) {
-        this.cacheMap.put(key.hashCode(), value);
+        this.cacheMap.put(key, value);
     }
 
     /**
      * {@inheritDoc}
      */
     public Object removeObject(Object key) {
-        return this.cacheMap.remove(key.hashCode());
+        return this.cacheMap.remove(key);
     }
 
     /**
