@@ -153,8 +153,11 @@
               
     <li><h2>Classes</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html">AbstractHazelcastCache</a></li>
           <li class="selected api apilevel-"><a href="../../../../org/mybatis/caches/hazelcast/HazelcastCache.html">HazelcastCache</a></li>
+          <li class="api apilevel-"><a href="../../../../org/mybatis/caches/hazelcast/HazelcastClientCache.html">HazelcastClientCache</a></li>
           <li class="api apilevel-"><a href="../../../../org/mybatis/caches/hazelcast/LoggingHazelcastCache.html">LoggingHazelcastCache</a></li>
+          <li class="api apilevel-"><a href="../../../../org/mybatis/caches/hazelcast/LoggingHazelcastClientCache.html">LoggingHazelcastClientCache</a></li>
       </ul>
     </li>
               
@@ -203,6 +206,15 @@
   
   
   
+   
+  
+  
+
+  
+   
+  
+  
+  
   
 
   
@@ -224,14 +236,14 @@ Summary:
 
 
 
-
-  <a href="#pubctors">Ctors</a>
+  <a href="#inhfields">Inherited Fields</a>
   
 
 
-
-  &#124; <a href="#pubmethods">Methods</a>
+  &#124; <a href="#pubctors">Ctors</a>
   
+
+
 
 
 
@@ -264,17 +276,16 @@ Summary:
 
 
   
-    extends Object<br/>
+  
+  
+
+  
+    extends <a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html">AbstractHazelcastCache</a><br/>
   
   
   
 
   
-  
-      implements 
-      
-        Cache 
-      
   
   
 
@@ -289,11 +300,21 @@ Summary:
 
     <tr>
          	
-        <td colspan="2" class="jd-inheritance-class-cell">java.lang.Object</td>
+        <td colspan="3" class="jd-inheritance-class-cell">java.lang.Object</td>
     </tr>
     
 
     <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+         	
+        <td colspan="2" class="jd-inheritance-class-cell"><a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html">org.mybatis.caches.hazelcast.AbstractHazelcastCache</a></td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
@@ -361,6 +382,75 @@ Summary:
 
 
 
+<!-- =========== FIELD SUMMARY =========== -->
+<table id="inhfields" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Fields</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-fields-org.mybatis.caches.hazelcast.AbstractHazelcastCache" class="jd-expando-trigger closed"
+          ><img id="inherited-fields-org.mybatis.caches.hazelcast.AbstractHazelcastCache-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>From class
+<a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html">org.mybatis.caches.hazelcast.AbstractHazelcastCache</a>
+<div id="inherited-fields-org.mybatis.caches.hazelcast.AbstractHazelcastCache">
+  <div id="inherited-fields-org.mybatis.caches.hazelcast.AbstractHazelcastCache-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-fields-org.mybatis.caches.hazelcast.AbstractHazelcastCache-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          protected
+          
+          final
+          Map&lt;Object,&nbsp;Object&gt;</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html#cacheMap">cacheMap</a></td>
+          <td class="jd-descrcol" width="100%">The cache map reference.</td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          protected
+          
+          final
+          String</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html#id">id</a></td>
+          <td class="jd-descrcol" width="100%">The cache id.</td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          protected
+          
+          final
+          ReadWriteLock</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html#readWriteLock">readWriteLock</a></td>
+          <td class="jd-descrcol" width="100%">The <code>ReadWriteLock</code>.</td>
+      </tr>
+      
+    
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+
+
+
+</table>
+
+
 
 
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -381,7 +471,7 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/HazelcastCache.html#HazelcastCache(java.lang.String)">HazelcastCache</a></span>(String id)</nobr>
         
-        <div class="jd-descrdiv">Instantiates a new Hazelcast cache for the specified id.</div>
+        <div class="jd-descrdiv">Instantiates a new Hazelcast cache for the specified namespace.</div>
   
   </td></tr>
 
@@ -394,9 +484,34 @@ Summary:
 
 
 
-<!-- ========== METHOD SUMMARY =========== -->
-<table id="pubmethods" class="jd-sumtable"><tr><th colspan="12">Public Methods</th></tr>
 
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mybatis.caches.hazelcast.AbstractHazelcastCache" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mybatis.caches.hazelcast.AbstractHazelcastCache-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  <a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html">org.mybatis.caches.hazelcast.AbstractHazelcastCache</a>
+
+<div id="inherited-methods-org.mybatis.caches.hazelcast.AbstractHazelcastCache">
+  <div id="inherited-methods-org.mybatis.caches.hazelcast.AbstractHazelcastCache-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mybatis.caches.hazelcast.AbstractHazelcastCache-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
 
 
 	 
@@ -410,7 +525,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/HazelcastCache.html#clear()">clear</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html#clear()">clear</a></span>()</nobr>
         
         <div class="jd-descrdiv">
 </div>
@@ -429,7 +544,7 @@ Summary:
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/HazelcastCache.html#equals(java.lang.Object)">equals</a></span>(Object obj)</nobr>
+        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html#equals(java.lang.Object)">equals</a></span>(Object obj)</nobr>
         
         <div class="jd-descrdiv">
 </div>
@@ -448,7 +563,7 @@ Summary:
             String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/HazelcastCache.html#getId()">getId</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html#getId()">getId</a></span>()</nobr>
         
         <div class="jd-descrdiv">
 </div>
@@ -467,7 +582,7 @@ Summary:
             Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/HazelcastCache.html#getObject(java.lang.Object)">getObject</a></span>(Object key)</nobr>
+        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html#getObject(java.lang.Object)">getObject</a></span>(Object key)</nobr>
         
         <div class="jd-descrdiv">
 </div>
@@ -486,7 +601,7 @@ Summary:
             ReadWriteLock</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/HazelcastCache.html#getReadWriteLock()">getReadWriteLock</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html#getReadWriteLock()">getReadWriteLock</a></span>()</nobr>
         
         <div class="jd-descrdiv">
 </div>
@@ -505,7 +620,7 @@ Summary:
             int</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/HazelcastCache.html#getSize()">getSize</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html#getSize()">getSize</a></span>()</nobr>
         
         <div class="jd-descrdiv">
 </div>
@@ -524,7 +639,7 @@ Summary:
             int</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/HazelcastCache.html#hashCode()">hashCode</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html#hashCode()">hashCode</a></span>()</nobr>
         
         <div class="jd-descrdiv">
 </div>
@@ -543,7 +658,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/HazelcastCache.html#putObject(java.lang.Object, java.lang.Object)">putObject</a></span>(Object key, Object value)</nobr>
+        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html#putObject(java.lang.Object, java.lang.Object)">putObject</a></span>(Object key, Object value)</nobr>
         
         <div class="jd-descrdiv">
 </div>
@@ -562,7 +677,7 @@ Summary:
             Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/HazelcastCache.html#removeObject(java.lang.Object)">removeObject</a></span>(Object key)</nobr>
+        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html#removeObject(java.lang.Object)">removeObject</a></span>(Object key)</nobr>
         
         <div class="jd-descrdiv">
 </div>
@@ -581,7 +696,7 @@ Summary:
             String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/HazelcastCache.html#toString()">toString</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../org/mybatis/caches/hazelcast/AbstractHazelcastCache.html#toString()">toString</a></span>()</nobr>
         
         <div class="jd-descrdiv">
 </div>
@@ -589,19 +704,11 @@ Summary:
   </td></tr>
 
 
-
 </table>
+  </div>
+</div>
+</td></tr>
 
-
-
-
-
-
-
-<!-- ========== METHOD SUMMARY =========== -->
-<table id="inhmethods" class="jd-sumtable"><tr><th>
-  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
-  <div style="clear:left;">Inherited Methods</div></th></tr>
 
 
 <tr class="api apilevel-" >
@@ -1002,7 +1109,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Instantiates a new Hazelcast cache for the specified id.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Instantiates a new Hazelcast cache for the specified namespace.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
@@ -1028,331 +1135,6 @@ From interface
 
 <!-- ========= METHOD DETAIL ======== -->
 <!-- Public methdos -->
-
-<h2>Public Methods</h2>
-
-
-
-<A NAME="clear()"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">clear</span>
-      <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>
-</p></div>
-
-    </div>
-</div>
-
-
-<A NAME="equals(java.lang.Object)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        boolean
-      </span>
-      <span class="sympad">equals</span>
-      <span class="normal">(Object obj)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>
-</p></div>
-
-    </div>
-</div>
-
-
-<A NAME="getId()"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        String
-      </span>
-      <span class="sympad">getId</span>
-      <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>
-</p></div>
-
-    </div>
-</div>
-
-
-<A NAME="getObject(java.lang.Object)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        Object
-      </span>
-      <span class="sympad">getObject</span>
-      <span class="normal">(Object key)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>
-</p></div>
-
-    </div>
-</div>
-
-
-<A NAME="getReadWriteLock()"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        ReadWriteLock
-      </span>
-      <span class="sympad">getReadWriteLock</span>
-      <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>
-</p></div>
-
-    </div>
-</div>
-
-
-<A NAME="getSize()"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        int
-      </span>
-      <span class="sympad">getSize</span>
-      <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>
-</p></div>
-
-    </div>
-</div>
-
-
-<A NAME="hashCode()"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        int
-      </span>
-      <span class="sympad">hashCode</span>
-      <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>
-</p></div>
-
-    </div>
-</div>
-
-
-<A NAME="putObject(java.lang.Object, java.lang.Object)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">putObject</span>
-      <span class="normal">(Object key, Object value)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>
-</p></div>
-
-    </div>
-</div>
-
-
-<A NAME="removeObject(java.lang.Object)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        Object
-      </span>
-      <span class="sympad">removeObject</span>
-      <span class="normal">(Object key)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>
-</p></div>
-
-    </div>
-</div>
-
-
-<A NAME="toString()"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        String
-      </span>
-      <span class="sympad">toString</span>
-      <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>
-</p></div>
-
-    </div>
-</div>
-
-
 
 
 
