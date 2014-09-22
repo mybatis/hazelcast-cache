@@ -1,4 +1,18 @@
-Hazelcast support for MyBatis Cache
+MyBatis Hazelcast Extension
+===========================
+
+[![Build Status](https://travis-ci.org/mybatis/hazelcast-cache.svg?branch=master)](https://travis-ci.org/mybatis/hazelcast-cache)
+[![Maven central](https://maven-badges.herokuapp.com/maven-central/org.mybatis.caches/mybatis-hazelcast/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.mybatis.caches/mybatis-hazelcast)
+
+![mybatis-hazelcast](http://mybatis.github.io/images/mybatis-logo.png)
+
+MyBatis-Hazelcast extension Hazelcast support for MyBatis Cache.
+
+Essentials
+----------
+
+* [See the docs](http://mybatis.github.io/hazelcast-cache/)
+
 
 This module contains two cache implementations utilizing Hazelcast: 
 
