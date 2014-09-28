@@ -14,114 +14,115 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.mybatis</groupId>
-		<artifactId>mybatis-parent</artifactId>
-		<version>21</version>
-	</parent>
+  <parent>
+    <groupId>org.mybatis</groupId>
+    <artifactId>mybatis-parent</artifactId>
+    <version>22-SNAPSHOT</version>
+  </parent>
 
-	<groupId>org.mybatis.caches</groupId>
-	<artifactId>mybatis-hazelcast</artifactId>
-	<version>1.1.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+  <groupId>org.mybatis.caches</groupId>
+  <artifactId>mybatis-hazelcast</artifactId>
+  <version>1.1.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
-	<name>MyBatis Caches :: Hazelcast</name>
-	<description>Hazelcast support for MyBatis Cache</description>
-	<url>http://www.mybatis.org/caches/hazelcast/</url>
+  <name>mybatis-hazelcast</name>
+  <description>Hazelcast support for MyBatis Cache</description>
+  <url>http://www.mybatis.org/caches/hazelcast/</url>
 
-	<scm>
-		<url>http://github.com/mybatis/hazelcast-cache</url>
-		<connection>scm:git:ssh://github.com/mybatis/hazelcast-cache.git</connection>
-		<developerConnection>scm:git:git+ssh://git@github.com/mybatis/hazelcast-cache.git</developerConnection>
-		<tag>HEAD</tag>
-	</scm>
-	<issueManagement>
-		<system>GitHub Issue Management</system>
-		<url>https://github.com/mybatis/hazelcast-cache/issues</url>
-	</issueManagement>
-	<ciManagement>
-		<system>Travis CI</system>
-		<url>https://travis-ci.org/hazelcast-cache/guice</url>
-	</ciManagement>
-	<distributionManagement>
-		<site>
-			<id>github</id>
-			<url>gitsite:git@github.com/mybatis/hazelcast-cache.git</url>
-		</site>
-	</distributionManagement>
+  <scm>
+    <url>http://github.com/mybatis/hazelcast-cache</url>
+    <connection>scm:git:ssh://github.com/mybatis/hazelcast-cache.git</connection>
+    <developerConnection>scm:git:git+ssh://git@github.com/mybatis/hazelcast-cache.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+  <issueManagement>
+    <system>GitHub Issue Management</system>
+    <url>https://github.com/mybatis/hazelcast-cache/issues</url>
+  </issueManagement>
+  <ciManagement>
+    <system>Travis CI</system>
+    <url>https://travis-ci.org/hazelcast-cache/guice</url>
+  </ciManagement>
+  <distributionManagement>
+    <site>
+      <id>github</id>
+      <url>gitsite:git@github.com/mybatis/hazelcast-cache.git</url>
+    </site>
+  </distributionManagement>
 
-	<properties>
-		<findbugs.onlyAnalyze>org.mybatis.caches.hazelcast.*</findbugs.onlyAnalyze>
-		<clirr.comparisonVersion>1.0.1</clirr.comparisonVersion>
-		<gcu.product>Cache</gcu.product>
-	</properties>
+  <properties>
+    <clirr.comparisonVersion>1.1.0</clirr.comparisonVersion>
+    <findbugs.onlyAnalyze>org.mybatis.caches.hazelcast.*</findbugs.onlyAnalyze>
+    <gcu.product>Cache</gcu.product>
+  </properties>
 
-	<dependencies>
-		<!-- | Provided dependencies -->
-		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis</artifactId>
-			<version>3.2.6</version>
-			<scope>provided</scope>
-		</dependency>
+  <dependencies>
+    <!-- | Provided dependencies -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.2.7</version>
+      <scope>provided</scope>
+    </dependency>
 
-		<!-- | compile dependencies -->
-		<dependency>
-			<groupId>com.hazelcast</groupId>
-			<artifactId>hazelcast</artifactId>
-			<version>3.1.6</version>
-			<scope>compile</scope>
-		</dependency>
+    <!-- | compile dependencies -->
+    <dependency>
+      <groupId>com.hazelcast</groupId>
+      <artifactId>hazelcast</artifactId>
+      <version>3.3</version>
+      <scope>compile</scope>
+    </dependency>
 
-		<dependency>
-			<groupId>com.hazelcast</groupId>
-			<artifactId>hazelcast-client</artifactId>
-			<version>3.1.6</version>
-			<scope>compile</scope>
-		</dependency>
+    <dependency>
+      <groupId>com.hazelcast</groupId>
+      <artifactId>hazelcast-client</artifactId>
+      <version>3.3</version>
+      <scope>compile</scope>
+    </dependency>
 
-		<!-- | test dependencies -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+    <!-- | test dependencies -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<configuration>
-					<arguments>-Prelease,bundle,gupload</arguments>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <configuration>
+          <arguments>-Prelease,bundle,gupload</arguments>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>2.2</version>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>dependencies</report>
-							<report>dependency-convergence</report>
-							<report>index</report>
-							<report>summary</report>
-						</reports>
-					</reportSet>
-				</reportSets>
-			</plugin>
-		</plugins>
-	</reporting>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>2.7</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>dependencies</report>
+              <report>dependency-convergence</report>
+              <report>index</report>
+              <report>summary</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
 
 </project>
