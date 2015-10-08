@@ -27,6 +27,7 @@ import com.hazelcast.core.HazelcastInstance;
  */
 public class HazelcastClientCache extends AbstractHazelcastCache {
 
+    /** The Constant CACHE. */
     private static final HazelcastInstance CACHE = HazelcastClient.newHazelcastClient();
     
     /**

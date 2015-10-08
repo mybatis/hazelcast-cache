@@ -21,49 +21,79 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 
 /**
+ * The Class DummyReadWriteLock.
+ *
  * @author Iwao AVE!
  */
 class DummyReadWriteLock implements ReadWriteLock {
 
+    /** The lock. */
     private Lock lock = new DummyLock();
 
+    /* (non-Javadoc)
+     * @see java.util.concurrent.locks.ReadWriteLock#readLock()
+     */
     @Override
     public Lock readLock() {
         return this.lock;
     }
 
+    /* (non-Javadoc)
+     * @see java.util.concurrent.locks.ReadWriteLock#writeLock()
+     */
     @Override
     public Lock writeLock() {
         return this.lock;
     }
 
+    /**
+     * The Class DummyLock.
+     */
     static class DummyLock implements Lock {
 
+        /* (non-Javadoc)
+         * @see java.util.concurrent.locks.Lock#lock()
+         */
         @Override
         public void lock() {
             // Do Nothing
         }
 
+        /* (non-Javadoc)
+         * @see java.util.concurrent.locks.Lock#lockInterruptibly()
+         */
         @Override
         public void lockInterruptibly() throws InterruptedException {
             // Do Nothing
         }
 
+        /* (non-Javadoc)
+         * @see java.util.concurrent.locks.Lock#tryLock()
+         */
         @Override
         public boolean tryLock() {
             return true;
         }
 
+        /* (non-Javadoc)
+         * @see java.util.concurrent.locks.Lock#tryLock(long, java.util.concurrent.TimeUnit)
+         */
         @Override
         public boolean tryLock(long paramLong, TimeUnit paramTimeUnit) throws InterruptedException {
             return true;
         }
 
+        /* (non-Javadoc)
+         * @see java.util.concurrent.locks.Lock#unlock()
+         */
         @Override
         public void unlock() {
             // Do Nothing
         }
 
+        /* (non-Javadoc)
+         * @see java.util.concurrent.locks.Lock#newCondition()
+         */
         @Override
         public Condition newCondition() {
             return null;
