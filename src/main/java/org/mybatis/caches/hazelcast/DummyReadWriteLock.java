@@ -29,12 +29,12 @@ class DummyReadWriteLock implements ReadWriteLock {
 
     @Override
     public Lock readLock() {
-        return lock;
+        return this.lock;
     }
 
     @Override
     public Lock writeLock() {
-        return lock;
+        return this.lock;
     }
 
     static class DummyLock implements Lock {
