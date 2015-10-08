@@ -2,6 +2,7 @@ MyBatis Hazelcast Extension
 ===========================
 
 [![Build Status](https://travis-ci.org/mybatis/hazelcast-cache.svg?branch=master)](https://travis-ci.org/mybatis/hazelcast-cache)
+[![Coverage Status](https://coveralls.io/repos/mybatis/hazelcast-cache/badge.svg?branch=master&service=github)](https://coveralls.io/github/mybatis/hazelcast-cache?branch=master)
 [![Dependency Status](https://www.versioneye.com/user/projects/5615c512a1933400150005ac/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5615c512a1933400150005ac)
 [![Maven central](https://maven-badges.herokuapp.com/maven-central/org.mybatis.caches/mybatis-hazelcast/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.mybatis.caches/mybatis-hazelcast)
 
