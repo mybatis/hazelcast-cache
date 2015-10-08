@@ -6,7 +6,7 @@ MyBatis Hazelcast Extension
 [![Dependency Status](https://www.versioneye.com/user/projects/5615c512a1933400150005ac/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5615c512a1933400150005ac)
 [![Maven central](https://maven-badges.herokuapp.com/maven-central/org.mybatis.caches/mybatis-hazelcast/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.mybatis.caches/mybatis-hazelcast)
 
-![mybatis-hazelcast](http://mybatis.github.io/images/mybatis-logo.png)
+![mybatis-logo](http://mybatis.github.io/images/mybatis-logo.png)
 
 MyBatis-Hazelcast extension Hazelcast support for MyBatis Cache.
 
