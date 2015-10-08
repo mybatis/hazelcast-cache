@@ -33,8 +33,9 @@ if [ "$mybatis_repo" == "https://github.com/mybatis/hazelcast-cache.git" ] && [ 
   elif [ $VER == "17" ]; then
     mvn clean test jacoco:report coveralls:report -q
     echo -e "Successfully ran coveralls under Travis job ${TRAVIS_JOB_NUMBER}"
-	mvn site site:deploy -q
-	echo -e "Successfully deploy site under Travis job ${TRAVIS_JOB_NUMBER}"
+	# various issues exist currently in building this so comment for now
+	# mvn site site:deploy -q
+	# echo -e "Successfully deploy site under Travis job ${TRAVIS_JOB_NUMBER}"
   fi
 else
   echo "Travis build skipped"
