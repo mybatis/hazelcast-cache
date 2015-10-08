@@ -54,6 +54,7 @@ public abstract class AbstractHazelcastCache implements Cache {
     /**
      * {@inheritDoc}
      */
+    @Override
     public void clear() {
         this.cacheMap.clear();
     }
@@ -61,6 +62,7 @@ public abstract class AbstractHazelcastCache implements Cache {
     /**
      * {@inheritDoc}
      */
+    @Override
     public String getId() {
         return this.id;
     }
@@ -68,6 +70,7 @@ public abstract class AbstractHazelcastCache implements Cache {
     /**
      * {@inheritDoc}
      */
+    @Override
     public Object getObject(Object key) {
         return this.cacheMap.get(key);
     }
@@ -75,6 +78,7 @@ public abstract class AbstractHazelcastCache implements Cache {
     /**
      * {@inheritDoc}
      */
+    @Override
     public ReadWriteLock getReadWriteLock() {
         return this.readWriteLock;
     }
@@ -82,6 +86,7 @@ public abstract class AbstractHazelcastCache implements Cache {
     /**
      * {@inheritDoc}
      */
+    @Override
     public int getSize() {
         return this.cacheMap.size();
     }
@@ -89,6 +94,7 @@ public abstract class AbstractHazelcastCache implements Cache {
     /**
      * {@inheritDoc}
      */
+    @Override
     public void putObject(Object key, Object value) {
     	if(value!=null) {
     		cacheMap.put(key, value);
@@ -103,6 +109,7 @@ public abstract class AbstractHazelcastCache implements Cache {
     /**
      * {@inheritDoc}
      */
+    @Override
     public Object removeObject(Object key) {
         return this.cacheMap.remove(key);
     }
