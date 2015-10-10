@@ -22,6 +22,7 @@
     <groupId>org.mybatis</groupId>
     <artifactId>mybatis-parent</artifactId>
     <version>26-SNAPSHOT</version>
+    <relativePath />
   </parent>
 
   <groupId>org.mybatis.caches</groupId>
