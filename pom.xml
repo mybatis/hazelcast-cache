@@ -51,7 +51,7 @@
   <distributionManagement>
     <site>
       <id>gh-pages</id>
-      <name>Mybatis Hazelcast GitHub Pages</name>
+      <name>Mybatis GitHub Pages</name>
       <url>git:ssh://git@github.com/mybatis/hazelcast-cache.git?gh-pages#</url>
     </site>
   </distributionManagement>
