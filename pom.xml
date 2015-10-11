@@ -22,6 +22,7 @@
     <groupId>org.mybatis</groupId>
     <artifactId>mybatis-parent</artifactId>
     <version>26-SNAPSHOT</version>
+    <relativePath />
   </parent>
 
   <groupId>org.mybatis.caches</groupId>
@@ -50,7 +51,7 @@
   <distributionManagement>
     <site>
       <id>gh-pages</id>
-      <name>Mybatis Guice GitHub Pages</name>
+      <name>Mybatis Hazelcast GitHub Pages</name>
       <url>git:ssh://git@github.com/mybatis/hazelcast-cache.git?gh-pages#</url>
     </site>
   </distributionManagement>
@@ -108,20 +109,14 @@
 
   <reporting>
     <plugins>
+      <!-- Skip Javadoc as it crashes site generation -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>2.8.1</version>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>dependencies</report>
-              <report>dependency-convergence</report>
-              <report>index</report>
-              <report>summary</report>
-            </reports>
-          </reportSet>
-        </reportSets>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.10.3</version>
+        <configuration>
+            <skip>true</skip>
+        </configuration>
       </plugin>
     </plugins>
   </reporting>

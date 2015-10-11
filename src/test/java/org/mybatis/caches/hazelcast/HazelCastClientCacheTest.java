@@ -25,6 +25,7 @@ public final class HazelCastClientCacheTest extends BaseHazelcastTestCase {
         new HazelcastCache(DEFAULT_ID);
     }
 
+    @Override
     protected Cache newCache() {
         return new HazelcastClientCache(DEFAULT_ID);
     }

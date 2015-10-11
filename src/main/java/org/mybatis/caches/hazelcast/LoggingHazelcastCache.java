@@ -24,6 +24,11 @@ import org.apache.ibatis.cache.decorators.LoggingCache;
  */
 public final class LoggingHazelcastCache extends LoggingCache {
 
+    /**
+     * Instantiates a new logging hazelcast cache.
+     *
+     * @param id the id
+     */
     public LoggingHazelcastCache(final String id) {
         super(new HazelcastCache(id));
     }
