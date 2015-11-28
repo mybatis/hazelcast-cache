@@ -21,7 +21,7 @@
   <parent>
     <groupId>org.mybatis</groupId>
     <artifactId>mybatis-parent</artifactId>
-    <version>26-SNAPSHOT</version>
+    <version>26</version>
     <relativePath />
   </parent>
 
@@ -75,14 +75,14 @@
     <dependency>
       <groupId>com.hazelcast</groupId>
       <artifactId>hazelcast</artifactId>
-      <version>3.5.3</version>
+      <version>3.5.4</version>
       <scope>compile</scope>
     </dependency>
 
     <dependency>
       <groupId>com.hazelcast</groupId>
       <artifactId>hazelcast-client</artifactId>
-      <version>3.5.3</version>
+      <version>3.5.4</version>
       <scope>compile</scope>
     </dependency>
 
