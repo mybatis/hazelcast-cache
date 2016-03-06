@@ -75,14 +75,14 @@
     <dependency>
       <groupId>com.hazelcast</groupId>
       <artifactId>hazelcast</artifactId>
-      <version>3.6</version>
+      <version>3.6.1</version>
       <scope>compile</scope>
     </dependency>
 
     <dependency>
       <groupId>com.hazelcast</groupId>
       <artifactId>hazelcast-client</artifactId>
-      <version>3.6</version>
+      <version>3.6.1</version>
       <scope>compile</scope>
     </dependency>
 
