@@ -15,10 +15,11 @@
  */
 package org.mybatis.caches.hazelcast;
 
-import java.util.Map;
 import java.util.concurrent.locks.ReadWriteLock;
 
 import org.apache.ibatis.cache.Cache;
+
+import com.hazelcast.core.IMap;
 
 /**
  * @author Simone Tripodi
@@ -38,9 +39,9 @@ public abstract class AbstractHazelcastCache implements Cache {
     /**
      * The cache map reference.
      */
-    protected final Map<Object, Object> cacheMap;
+    protected final IMap<Object, Object> cacheMap;
 
-    protected AbstractHazelcastCache(String id, Map<Object, Object> iMap) {
+    protected AbstractHazelcastCache(String id, IMap<Object, Object> iMap) {
         if (id == null) {
             throw new IllegalArgumentException("Cache instances require an id");
         }
