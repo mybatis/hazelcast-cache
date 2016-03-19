@@ -98,7 +98,7 @@ public abstract class AbstractHazelcastCache implements Cache {
     @Override
     public void putObject(Object key, Object value) {
         if(value!=null) {
-            this.cacheMap.put(key, value);
+            this.cacheMap.set(key, value);
         }
         else {
             if(this.cacheMap.containsKey(key)) {
