@@ -15,7 +15,5 @@
  */
 /**
  * Contains Hazelcast support for MyBatis Cache.
- *
- * @version $Id$
  */
 package org.mybatis.caches.hazelcast;
