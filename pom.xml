@@ -17,110 +17,111 @@
 
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>org.mybatis</groupId>
-    <artifactId>mybatis-parent</artifactId>
-    <version>27</version>
-    <relativePath />
-  </parent>
+    <parent>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis-parent</artifactId>
+        <version>27</version>
+        <relativePath/>
+    </parent>
 
-  <groupId>org.mybatis.caches</groupId>
-  <artifactId>mybatis-hazelcast</artifactId>
-  <version>1.1.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+    <groupId>org.mybatis.caches</groupId>
+    <artifactId>mybatis-hazelcast</artifactId>
+    <version>1.1.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-  <name>mybatis-hazelcast</name>
-  <description>Hazelcast support for MyBatis Cache</description>
-  <url>http://www.mybatis.org/caches/hazelcast/</url>
+    <name>mybatis-hazelcast</name>
+    <description>Hazelcast support for MyBatis Cache</description>
+    <url>http://www.mybatis.org/caches/hazelcast/</url>
 
-  <scm>
-    <url>http://github.com/mybatis/hazelcast-cache</url>
-    <connection>scm:git:ssh://github.com/mybatis/hazelcast-cache.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/mybatis/hazelcast-cache.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
-  <issueManagement>
-    <system>GitHub Issue Management</system>
-    <url>https://github.com/mybatis/hazelcast-cache/issues</url>
-  </issueManagement>
-  <ciManagement>
-    <system>Travis CI</system>
-    <url>https://travis-ci.org/hazelcast-cache/guice</url>
-  </ciManagement>
-  <distributionManagement>
-    <site>
-      <id>gh-pages</id>
-      <name>Mybatis GitHub Pages</name>
-      <url>git:ssh://git@github.com/mybatis/hazelcast-cache.git?gh-pages#</url>
-    </site>
-  </distributionManagement>
+    <scm>
+        <url>http://github.com/mybatis/hazelcast-cache</url>
+        <connection>scm:git:ssh://github.com/mybatis/hazelcast-cache.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/mybatis/hazelcast-cache.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+    <issueManagement>
+        <system>GitHub Issue Management</system>
+        <url>https://github.com/mybatis/hazelcast-cache/issues</url>
+    </issueManagement>
+    <ciManagement>
+        <system>Travis CI</system>
+        <url>https://travis-ci.org/hazelcast-cache/guice</url>
+    </ciManagement>
+    <distributionManagement>
+        <site>
+            <id>gh-pages</id>
+            <name>Mybatis GitHub Pages</name>
+            <url>git:ssh://git@github.com/mybatis/hazelcast-cache.git?gh-pages#</url>
+        </site>
+    </distributionManagement>
 
-  <properties>
-    <clirr.comparisonVersion>1.1.0</clirr.comparisonVersion>
-    <findbugs.onlyAnalyze>org.mybatis.caches.hazelcast.*</findbugs.onlyAnalyze>
-    <gcu.product>Cache</gcu.product>
-  </properties>
+    <properties>
+        <clirr.comparisonVersion>1.1.0</clirr.comparisonVersion>
+        <findbugs.onlyAnalyze>org.mybatis.caches.hazelcast.*</findbugs.onlyAnalyze>
+        <gcu.product>Cache</gcu.product>
+        <hazelcast.version>3.6.3</hazelcast.version>
+    </properties>
 
-  <dependencies>
-    <!-- | Provided dependencies -->
-    <dependency>
-      <groupId>org.mybatis</groupId>
-      <artifactId>mybatis</artifactId>
-      <version>3.4.0</version>
-      <scope>provided</scope>
-    </dependency>
+    <dependencies>
+        <!-- | Provided dependencies -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.4.0</version>
+            <scope>provided</scope>
+        </dependency>
 
-    <!-- | compile dependencies -->
-    <dependency>
-      <groupId>com.hazelcast</groupId>
-      <artifactId>hazelcast</artifactId>
-      <version>3.6.2</version>
-      <scope>compile</scope>
-    </dependency>
+        <!-- | compile dependencies -->
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast</artifactId>
+            <version>${hazelcast.version}</version>
+            <scope>compile</scope>
+        </dependency>
 
-    <dependency>
-      <groupId>com.hazelcast</groupId>
-      <artifactId>hazelcast-client</artifactId>
-      <version>3.6.2</version>
-      <scope>compile</scope>
-    </dependency>
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast-client</artifactId>
+            <version>${hazelcast.version}</version>
+            <scope>compile</scope>
+        </dependency>
 
-    <!-- | test dependencies -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+        <!-- | test dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <configuration>
-          <arguments>-Prelease,bundle</arguments>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <arguments>-Prelease,bundle</arguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-  <reporting>
-    <plugins>
-      <!-- Skip Javadoc as it crashes site generation -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.10.3</version>
-        <configuration>
-            <skip>true</skip>
-        </configuration>
-      </plugin>
-    </plugins>
-  </reporting>
+    <reporting>
+        <plugins>
+            <!-- Skip Javadoc as it crashes site generation -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.3</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
 
 </project>
