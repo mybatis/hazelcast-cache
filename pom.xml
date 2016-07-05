@@ -62,7 +62,7 @@
         <clirr.comparisonVersion>1.1.0</clirr.comparisonVersion>
         <findbugs.onlyAnalyze>org.mybatis.caches.hazelcast.*</findbugs.onlyAnalyze>
         <gcu.product>Cache</gcu.product>
-        <hazelcast.version>3.6.3</hazelcast.version>
+        <hazelcast.version>3.6.4</hazelcast.version>
     </properties>
 
     <dependencies>
@@ -70,7 +70,7 @@
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.4.0</version>
+            <version>3.4.1</version>
             <scope>provided</scope>
         </dependency>
 
@@ -116,7 +116,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.3</version>
+                <version>2.10.4</version>
                 <configuration>
                     <skip>true</skip>
                 </configuration>
