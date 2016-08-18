@@ -62,7 +62,7 @@
         <clirr.comparisonVersion>1.1.0</clirr.comparisonVersion>
         <findbugs.onlyAnalyze>org.mybatis.caches.hazelcast.*</findbugs.onlyAnalyze>
         <gcu.product>Cache</gcu.product>
-        <hazelcast.version>3.6.4</hazelcast.version>
+        <hazelcast.version>3.7</hazelcast.version>
     </properties>
 
     <dependencies>
