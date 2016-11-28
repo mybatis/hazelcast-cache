@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>AbstractHazelcastCache.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">mybatis-hazelcast</a> &gt; <a href="index.source.html" class="el_package">org.mybatis.caches.hazelcast</a> &gt; <span class="el_source">AbstractHazelcastCache.java</span></div><h1>AbstractHazelcastCache.java</h1><pre class="source lang-java linenums">/**
- *    Copyright 2010-2015 the original author or authors.
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AbstractHazelcastCache.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">mybatis-hazelcast</a> &gt; <a href="index.source.html" class="el_package">org.mybatis.caches.hazelcast</a> &gt; <span class="el_source">AbstractHazelcastCache.java</span></div><h1>AbstractHazelcastCache.java</h1><pre class="source lang-java linenums">/**
+ *    Copyright 2010-2016 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
  *    you may not use this file except in compliance with the License.
@@ -15,10 +15,11 @@
  */
 package org.mybatis.caches.hazelcast;
 
-import java.util.Map;
 import java.util.concurrent.locks.ReadWriteLock;
 
 import org.apache.ibatis.cache.Cache;
+
+import com.hazelcast.core.IMap;
 
 /**
  * @author Simone Tripodi
@@ -28,7 +29,7 @@ public abstract class AbstractHazelcastCache implements Cache {
     /**
      * The {@code ReadWriteLock}.
      */
-<span class="fc" id="L31">    protected final ReadWriteLock readWriteLock = new DummyReadWriteLock();</span>
+<span class="fc" id="L32">    protected final ReadWriteLock readWriteLock = new DummyReadWriteLock();</span>
 
     /**
      * The cache id.
@@ -38,33 +39,33 @@ public abstract class AbstractHazelcastCache implements Cache {
     /**
      * The cache map reference.
      */
-    protected final Map&lt;Object, Object&gt; cacheMap;
+    protected final IMap&lt;Object, Object&gt; cacheMap;
 
-<span class="fc" id="L43">    protected AbstractHazelcastCache(String id, Map&lt;Object, Object&gt; iMap) {</span>
-<span class="pc bpc" id="L44" title="1 of 2 branches missed.">        if (id == null) {</span>
-<span class="nc" id="L45">            throw new IllegalArgumentException(&quot;Cache instances require an id&quot;);</span>
+<span class="fc" id="L44">    protected AbstractHazelcastCache(String id, IMap&lt;Object, Object&gt; iMap) {</span>
+<span class="pc bpc" id="L45" title="1 of 2 branches missed.">        if (id == null) {</span>
+<span class="nc" id="L46">            throw new IllegalArgumentException(&quot;Cache instances require an id&quot;);</span>
         }
-<span class="pc bpc" id="L47" title="1 of 2 branches missed.">        if (iMap == null) {</span>
-<span class="nc" id="L48">            throw new IllegalArgumentException(&quot;Cache instances require a cacheMap&quot;);</span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">        if (iMap == null) {</span>
+<span class="nc" id="L49">            throw new IllegalArgumentException(&quot;Cache instances require a cacheMap&quot;);</span>
         }
-<span class="fc" id="L50">        this.id = id;</span>
-<span class="fc" id="L51">        this.cacheMap = iMap;</span>
-<span class="fc" id="L52">    }</span>
+<span class="fc" id="L51">        this.id = id;</span>
+<span class="fc" id="L52">        this.cacheMap = iMap;</span>
+<span class="fc" id="L53">    }</span>
 
     /**
      * {@inheritDoc}
      */
     @Override
     public void clear() {
-<span class="fc" id="L59">        this.cacheMap.clear();</span>
-<span class="fc" id="L60">    }</span>
+<span class="fc" id="L60">        this.cacheMap.clear();</span>
+<span class="fc" id="L61">    }</span>
 
     /**
      * {@inheritDoc}
      */
     @Override
     public String getId() {
-<span class="nc" id="L67">        return this.id;</span>
+<span class="nc" id="L68">        return this.id;</span>
     }
 
     /**
@@ -72,7 +73,7 @@ public abstract class AbstractHazelcastCache implements Cache {
      */
     @Override
     public Object getObject(Object key) {
-<span class="fc" id="L75">        return this.cacheMap.get(key);</span>
+<span class="fc" id="L76">        return this.cacheMap.get(key);</span>
     }
 
     /**
@@ -80,7 +81,7 @@ public abstract class AbstractHazelcastCache implements Cache {
      */
     @Override
     public ReadWriteLock getReadWriteLock() {
-<span class="nc" id="L83">        return this.readWriteLock;</span>
+<span class="nc" id="L84">        return this.readWriteLock;</span>
     }
 
     /**
@@ -88,7 +89,7 @@ public abstract class AbstractHazelcastCache implements Cache {
      */
     @Override
     public int getSize() {
-<span class="fc" id="L91">        return this.cacheMap.size();</span>
+<span class="fc" id="L92">        return this.cacheMap.size();</span>
     }
 
     /**
@@ -96,22 +97,22 @@ public abstract class AbstractHazelcastCache implements Cache {
      */
     @Override
     public void putObject(Object key, Object value) {
-<span class="pc bpc" id="L99" title="1 of 2 branches missed.">        if(value!=null) {</span>
-<span class="fc" id="L100">            this.cacheMap.put(key, value);</span>
-<span class="fc" id="L101">        }</span>
+<span class="pc bpc" id="L100" title="1 of 2 branches missed.">        if(value!=null) {</span>
+<span class="fc" id="L101">            this.cacheMap.set(key, value);</span>
+        }
         else {
-<span class="nc bnc" id="L103" title="All 2 branches missed.">            if(this.cacheMap.containsKey(key)) {</span>
-<span class="nc" id="L104">                this.cacheMap.remove(key);</span>
+<span class="nc bnc" id="L104" title="All 2 branches missed.">            if(this.cacheMap.containsKey(key)) {</span>
+<span class="nc" id="L105">                this.cacheMap.remove(key);</span>
             }
         }
-<span class="fc" id="L107">    }</span>
+<span class="fc" id="L108">    }</span>
 
     /**
      * {@inheritDoc}
      */
     @Override
     public Object removeObject(Object key) {
-<span class="fc" id="L114">        return this.cacheMap.remove(key);</span>
+<span class="fc" id="L115">        return this.cacheMap.remove(key);</span>
     }
 
     /**
@@ -119,18 +120,18 @@ public abstract class AbstractHazelcastCache implements Cache {
      */
     @Override
     public boolean equals(Object obj) {
-<span class="nc bnc" id="L122" title="All 2 branches missed.">        if (this == obj) {</span>
-<span class="nc" id="L123">            return true;</span>
+<span class="nc bnc" id="L123" title="All 2 branches missed.">        if (this == obj) {</span>
+<span class="nc" id="L124">            return true;</span>
         }
-<span class="nc bnc" id="L125" title="All 2 branches missed.">        if (obj == null) {</span>
-<span class="nc" id="L126">            return false;</span>
+<span class="nc bnc" id="L126" title="All 2 branches missed.">        if (obj == null) {</span>
+<span class="nc" id="L127">            return false;</span>
         }
-<span class="nc bnc" id="L128" title="All 2 branches missed.">        if (!(obj instanceof Cache)) {</span>
-<span class="nc" id="L129">            return false;</span>
+<span class="nc bnc" id="L129" title="All 2 branches missed.">        if (!(obj instanceof Cache)) {</span>
+<span class="nc" id="L130">            return false;</span>
         }
 
-<span class="nc" id="L132">        Cache otherCache = (Cache) obj;</span>
-<span class="nc" id="L133">        return this.id.equals(otherCache.getId());</span>
+<span class="nc" id="L133">        Cache otherCache = (Cache) obj;</span>
+<span class="nc" id="L134">        return this.id.equals(otherCache.getId());</span>
     }
 
     /**
@@ -138,7 +139,7 @@ public abstract class AbstractHazelcastCache implements Cache {
      */
     @Override
     public int hashCode() {
-<span class="nc" id="L141">        return this.id.hashCode();</span>
+<span class="nc" id="L142">        return this.id.hashCode();</span>
     }
 
     /**
@@ -146,8 +147,8 @@ public abstract class AbstractHazelcastCache implements Cache {
      */
     @Override
     public String toString() {
-<span class="nc" id="L149">        return &quot;Hazelcast {&quot; + this.id + &quot;}&quot;;</span>
+<span class="nc" id="L150">        return &quot;Hazelcast {&quot; + this.id + &quot;}&quot;;</span>
     }
 
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
