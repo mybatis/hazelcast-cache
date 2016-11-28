@@ -48,7 +48,7 @@
     </issueManagement>
     <ciManagement>
         <system>Travis CI</system>
-        <url>https://travis-ci.org/hazelcast-cache/guice</url>
+        <url>https://travis-ci.org/mybatis/hazelcast-cache</url>
     </ciManagement>
     <distributionManagement>
         <site>
