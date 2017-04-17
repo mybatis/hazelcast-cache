@@ -64,7 +64,7 @@
 
         <hazelcast.version>3.8</hazelcast.version>
         <junit.version>4.12</junit.version>
-        <mybatis.version>3.4.2</mybatis.version>
+        <mybatis.version>3.4.4</mybatis.version>
     </properties>
 
     <dependencies>
