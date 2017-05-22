@@ -1,5 +1,5 @@
 /**
- *    Copyright 2010-2015 the original author or authors.
+ *    Copyright 2010-2017 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -27,16 +27,16 @@ import com.hazelcast.core.HazelcastInstance;
  */
 public class HazelcastClientCache extends AbstractHazelcastCache {
 
-    /** The Constant CACHE. */
-    private static final HazelcastInstance CACHE = HazelcastClient.newHazelcastClient();
-    
-    /**
-     * Instantiates a new Hazelcast cache for the specified namespace.
-     *
-     * @param id the cache id.
-     */
-    public HazelcastClientCache(String id) {
-        super(id, CACHE.getMap(id));
-    }
+  /** The Constant CACHE. */
+  private static final HazelcastInstance CACHE = HazelcastClient.newHazelcastClient();
+
+  /**
+   * Instantiates a new Hazelcast cache for the specified namespace.
+   *
+   * @param id the cache id.
+   */
+  public HazelcastClientCache(String id) {
+    super(id, CACHE.getMap(id));
+  }
 
 }
