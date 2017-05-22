@@ -15,13 +15,15 @@
  */
 package org.mybatis.caches.hazelcast;
 
+import com.hazelcast.core.IMap;
+
 import java.util.concurrent.locks.ReadWriteLock;
 
 import org.apache.ibatis.cache.Cache;
 
-import com.hazelcast.core.IMap;
-
 /**
+ * The Class AbstractHazelcastCache.
+ *
  * @author Simone Tripodi
  */
 public abstract class AbstractHazelcastCache implements Cache {
@@ -41,15 +43,21 @@ public abstract class AbstractHazelcastCache implements Cache {
    */
   protected final IMap<Object, Object> cacheMap;
 
-  protected AbstractHazelcastCache(String id, IMap<Object, Object> iMap) {
+  /**
+   * Instantiates a new abstract hazelcast cache.
+   *
+   * @param id the id
+   * @param imap the i map
+   */
+  protected AbstractHazelcastCache(String id, IMap<Object, Object> imap) {
     if (id == null) {
       throw new IllegalArgumentException("Cache instances require an id");
     }
-    if (iMap == null) {
+    if (imap == null) {
       throw new IllegalArgumentException("Cache instances require a cacheMap");
     }
     this.id = id;
-    this.cacheMap = iMap;
+    this.cacheMap = imap;
   }
 
   /**
