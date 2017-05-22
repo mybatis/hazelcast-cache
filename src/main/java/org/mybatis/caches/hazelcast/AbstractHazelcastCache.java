@@ -1,5 +1,5 @@
 /**
- *    Copyright 2010-2016 the original author or authors.
+ *    Copyright 2010-2017 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -15,139 +15,146 @@
  */
 package org.mybatis.caches.hazelcast;
 
+import com.hazelcast.core.IMap;
+
 import java.util.concurrent.locks.ReadWriteLock;
 
 import org.apache.ibatis.cache.Cache;
 
-import com.hazelcast.core.IMap;
-
 /**
+ * The Class AbstractHazelcastCache.
+ *
  * @author Simone Tripodi
  */
 public abstract class AbstractHazelcastCache implements Cache {
 
-    /**
-     * The {@code ReadWriteLock}.
-     */
-    protected final ReadWriteLock readWriteLock = new DummyReadWriteLock();
+  /**
+   * The {@code ReadWriteLock}.
+   */
+  protected final ReadWriteLock readWriteLock = new DummyReadWriteLock();
 
-    /**
-     * The cache id.
-     */
-    protected final String id;
+  /**
+   * The cache id.
+   */
+  protected final String id;
 
-    /**
-     * The cache map reference.
-     */
-    protected final IMap<Object, Object> cacheMap;
+  /**
+   * The cache map reference.
+   */
+  protected final IMap<Object, Object> cacheMap;
 
-    protected AbstractHazelcastCache(String id, IMap<Object, Object> iMap) {
-        if (id == null) {
-            throw new IllegalArgumentException("Cache instances require an id");
-        }
-        if (iMap == null) {
-            throw new IllegalArgumentException("Cache instances require a cacheMap");
-        }
-        this.id = id;
-        this.cacheMap = iMap;
+  /**
+   * Instantiates a new abstract hazelcast cache.
+   *
+   * @param id the id
+   * @param imap the i map
+   */
+  protected AbstractHazelcastCache(String id, IMap<Object, Object> imap) {
+    if (id == null) {
+      throw new IllegalArgumentException("Cache instances require an id");
+    }
+    if (imap == null) {
+      throw new IllegalArgumentException("Cache instances require a cacheMap");
+    }
+    this.id = id;
+    this.cacheMap = imap;
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public void clear() {
+    this.cacheMap.clear();
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String getId() {
+    return this.id;
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public Object getObject(Object key) {
+    return this.cacheMap.get(key);
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public ReadWriteLock getReadWriteLock() {
+    return this.readWriteLock;
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int getSize() {
+    return this.cacheMap.size();
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public void putObject(Object key, Object value) {
+    if (value != null) {
+      this.cacheMap.set(key, value);
+    } else {
+      if (this.cacheMap.containsKey(key)) {
+        this.cacheMap.remove(key);
+      }
+    }
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public Object removeObject(Object key) {
+    return this.cacheMap.remove(key);
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) {
+      return true;
+    }
+    if (obj == null) {
+      return false;
+    }
+    if (!(obj instanceof Cache)) {
+      return false;
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void clear() {
-        this.cacheMap.clear();
-    }
+    Cache otherCache = (Cache) obj;
+    return this.id.equals(otherCache.getId());
+  }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public String getId() {
-        return this.id;
-    }
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int hashCode() {
+    return this.id.hashCode();
+  }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Object getObject(Object key) {
-        return this.cacheMap.get(key);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public ReadWriteLock getReadWriteLock() {
-        return this.readWriteLock;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public int getSize() {
-        return this.cacheMap.size();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void putObject(Object key, Object value) {
-        if(value!=null) {
-            this.cacheMap.set(key, value);
-        }
-        else {
-            if(this.cacheMap.containsKey(key)) {
-                this.cacheMap.remove(key);
-            }
-        }
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Object removeObject(Object key) {
-        return this.cacheMap.remove(key);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (!(obj instanceof Cache)) {
-            return false;
-        }
-
-        Cache otherCache = (Cache) obj;
-        return this.id.equals(otherCache.getId());
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public int hashCode() {
-        return this.id.hashCode();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public String toString() {
-        return "Hazelcast {" + this.id + "}";
-    }
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+    return "Hazelcast {" + this.id + "}";
+  }
 
 }
