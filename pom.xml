@@ -62,7 +62,7 @@
         <findbugs.onlyAnalyze>org.mybatis.caches.hazelcast.*</findbugs.onlyAnalyze>
         <gcu.product>Cache</gcu.product>
 
-        <hazelcast.version>3.8.1</hazelcast.version>
+        <hazelcast.version>3.8.2</hazelcast.version>
         <junit.version>4.12</junit.version>
         <mybatis.version>3.4.4</mybatis.version>
     </properties>
