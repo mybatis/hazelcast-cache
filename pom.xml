@@ -63,7 +63,7 @@
         <gcu.product>Cache</gcu.product>
 
         <hazelcast.version>3.8.6</hazelcast.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.12.1</junit.version>
         <mybatis.version>3.4.5</mybatis.version>
     </properties>
 
@@ -93,8 +93,8 @@
 
         <!-- | test dependencies -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
