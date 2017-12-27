@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.mybatis</groupId>
         <artifactId>mybatis-parent</artifactId>
-        <version>29</version>
+        <version>30</version>
         <relativePath />
     </parent>
 
@@ -62,8 +62,8 @@
         <findbugs.onlyAnalyze>org.mybatis.caches.hazelcast.*</findbugs.onlyAnalyze>
         <gcu.product>Cache</gcu.product>
 
-        <hazelcast.version>3.8.6</hazelcast.version>
-        <junit.version>4.12.1</junit.version>
+        <hazelcast.version>3.9.1</hazelcast.version>
+        <junit.version>4.12.2</junit.version>
         <mybatis.version>3.4.5</mybatis.version>
     </properties>
 
