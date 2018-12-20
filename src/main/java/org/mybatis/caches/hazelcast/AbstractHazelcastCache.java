@@ -1,5 +1,5 @@
 /**
- *    Copyright 2010-2017 the original author or authors.
+ *    Copyright 2010-2018 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -46,8 +46,10 @@ public abstract class AbstractHazelcastCache implements Cache {
   /**
    * Instantiates a new abstract hazelcast cache.
    *
-   * @param id the id
-   * @param imap the i map
+   * @param id
+   *          the id
+   * @param imap
+   *          the i map
    */
   protected AbstractHazelcastCache(String id, IMap<Object, Object> imap) {
     if (id == null) {

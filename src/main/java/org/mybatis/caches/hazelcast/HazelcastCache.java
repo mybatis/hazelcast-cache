@@ -1,5 +1,5 @@
 /**
- *    Copyright 2010-2017 the original author or authors.
+ *    Copyright 2010-2018 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -31,7 +31,8 @@ public final class HazelcastCache extends AbstractHazelcastCache {
   /**
    * Instantiates a new Hazelcast cache for the specified namespace.
    *
-   * @param id the cache id.
+   * @param id
+   *          the cache id.
    */
   public HazelcastCache(String id) {
     super(id, CACHE.getMap(id));
