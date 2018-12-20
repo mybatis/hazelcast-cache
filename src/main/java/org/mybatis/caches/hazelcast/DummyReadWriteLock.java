@@ -1,5 +1,5 @@
 /**
- *    Copyright 2010-2017 the original author or authors.
+ *    Copyright 2010-2018 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -30,7 +30,8 @@ class DummyReadWriteLock implements ReadWriteLock {
   /** The lock. */
   private Lock lock = new DummyLock();
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
    * @see java.util.concurrent.locks.ReadWriteLock#readLock()
    */
   @Override
@@ -38,7 +39,8 @@ class DummyReadWriteLock implements ReadWriteLock {
     return this.lock;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
    * @see java.util.concurrent.locks.ReadWriteLock#writeLock()
    */
   @Override
@@ -51,7 +53,8 @@ class DummyReadWriteLock implements ReadWriteLock {
    */
   static class DummyLock implements Lock {
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
      * @see java.util.concurrent.locks.Lock#lock()
      */
     @Override
@@ -59,7 +62,8 @@ class DummyReadWriteLock implements ReadWriteLock {
       // Do Nothing
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
      * @see java.util.concurrent.locks.Lock#lockInterruptibly()
      */
     @Override
@@ -67,7 +71,8 @@ class DummyReadWriteLock implements ReadWriteLock {
       // Do Nothing
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
      * @see java.util.concurrent.locks.Lock#tryLock()
      */
     @Override
@@ -75,7 +80,8 @@ class DummyReadWriteLock implements ReadWriteLock {
       return true;
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
      * @see java.util.concurrent.locks.Lock#tryLock(long, java.util.concurrent.TimeUnit)
      */
     @Override
@@ -83,7 +89,8 @@ class DummyReadWriteLock implements ReadWriteLock {
       return true;
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
      * @see java.util.concurrent.locks.Lock#unlock()
      */
     @Override
@@ -91,7 +98,8 @@ class DummyReadWriteLock implements ReadWriteLock {
       // Do Nothing
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
      * @see java.util.concurrent.locks.Lock#newCondition()
      */
     @Override
