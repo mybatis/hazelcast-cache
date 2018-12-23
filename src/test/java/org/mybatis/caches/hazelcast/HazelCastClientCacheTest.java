@@ -16,11 +16,11 @@
 package org.mybatis.caches.hazelcast;
 
 import org.apache.ibatis.cache.Cache;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.BeforeAll;
 
 public final class HazelCastClientCacheTest extends BaseHazelcastTestCase {
 
-  @BeforeClass
+  @BeforeAll
   public static void setupClass() {
     new HazelcastCache(DEFAULT_ID);
   }
