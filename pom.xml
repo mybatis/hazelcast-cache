@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-       Copyright 2010-2018 the original author or authors.
+       Copyright 2010-2020 the original author or authors.
 
        Licensed under the Apache License, Version 2.0 (the "License");
        you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@
 
     <groupId>org.mybatis.caches</groupId>
     <artifactId>mybatis-hazelcast</artifactId>
-    <version>1.1.2-SNAPSHOT</version>
+    <version>1.1.2</version>
     <packaging>jar</packaging>
 
     <name>mybatis-hazelcast</name>
@@ -39,7 +39,7 @@
         <url>http://github.com/mybatis/hazelcast-cache</url>
         <connection>scm:git:ssh://github.com/mybatis/hazelcast-cache.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/mybatis/hazelcast-cache.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>mybatis-hazelcast-1.1.2</tag>
     </scm>
     <issueManagement>
         <system>GitHub Issue Management</system>
