@@ -32,3 +32,10 @@ Internally this is calling "Hazelcast.newHazelcastInstance()".
 Use "org.mybatis.caches.hazelcast.HazelcastClientCache" if you want the JVM running MyBatis to be a client to a Hazelcast cache cluster running outside the JVM running MyBatis.
 
 Internally this is calling "HazelcastClient.newHazelcastClient()". Also see http://hazelcast.org/docs/latest/manual/html/nativeclient.html
+
+Support Hazelcast
+-----------------
+4.0.x
+4.1.x
+5.0.x
+5.1.x
