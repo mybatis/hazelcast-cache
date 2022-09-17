@@ -66,6 +66,9 @@
         <junit.version>5.9.0</junit.version>
         <mybatis.version>3.5.10</mybatis.version>
         <module.name>org.mybatis.caches.hazelcast</module.name>
+
+        <!-- Reproducible Builds -->
+        <project.build.outputTimestamp>1757561022</project.build.outputTimestamp>
     </properties>
 
     <dependencies>
