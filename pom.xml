@@ -67,6 +67,8 @@
         <mybatis.version>3.5.11</mybatis.version>
         <module.name>org.mybatis.caches.hazelcast</module.name>
 
+        <argLine>-Djdk.attach.allowAttachSelf -Dhazelcast.security.recommendations -Dhz.jet.enabled=true --add-modules java.se --add-exports java.base/jdk.internal.ref=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens java.management/sun.management=ALL-UNNAMED --add-opens jdk.management/com.sun.management.internal=ALL-UNNAMED</argLine>
+
         <!-- Reproducible Builds -->
         <project.build.outputTimestamp>1670038089</project.build.outputTimestamp>
     </properties>
