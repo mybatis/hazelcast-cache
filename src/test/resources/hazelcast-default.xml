@@ -109,7 +109,7 @@
             </multicast>
 
             <!-- Specifies whether the TCP/IP discovery is enabled or not. Default value is false. -->
-            <tcp-ip enabled="false">
+            <tcp-ip enabled="true">
                 <interface>127.0.0.1</interface>
                 <member-list>
                     <member>127.0.0.1</member>
