@@ -22,9 +22,6 @@ import com.hazelcast.core.HazelcastInstance;
  * Cache adapter for Hazelcast using "Hazelcast Client" API {@link com.hazelcast.client.HazelcastClient}.
  * <p>
  * This means that the HazelcastClientCache is not a member of the cluster.
- * </p>
- *
- * @author Ronald Ploeger
  */
 public class HazelcastClientCache extends AbstractHazelcastCache {
 

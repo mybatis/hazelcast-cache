@@ -20,8 +20,6 @@ import com.hazelcast.core.HazelcastInstance;
 
 /**
  * Cache adapter for Hazelcast.
- *
- * @author Eduardo Macarron
  */
 public final class HazelcastCache extends AbstractHazelcastCache {
 

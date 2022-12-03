@@ -19,8 +19,6 @@ import org.apache.ibatis.cache.decorators.LoggingCache;
 
 /**
  * {@code LoggingCache} adapter for HazelcastClientCache.
- *
- * @author Ronald Ploeger
  */
 public final class LoggingHazelcastClientCache extends LoggingCache {
 

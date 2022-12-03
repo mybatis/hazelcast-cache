@@ -23,24 +23,16 @@ import org.apache.ibatis.cache.Cache;
 
 /**
  * The Class AbstractHazelcastCache.
- *
- * @author Simone Tripodi
  */
 public abstract class AbstractHazelcastCache implements Cache {
 
-  /**
-   * The {@code ReadWriteLock}.
-   */
+  /** The {@code ReadWriteLock}. */
   protected final ReadWriteLock readWriteLock = new DummyReadWriteLock();
 
-  /**
-   * The cache id.
-   */
+  /** The cache id. */
   protected final String id;
 
-  /**
-   * The cache map reference.
-   */
+  /** The cache map reference. */
   protected final IMap<Object, Object> cacheMap;
 
   /**
@@ -62,49 +54,31 @@ public abstract class AbstractHazelcastCache implements Cache {
     this.cacheMap = imap;
   }
 
-  /**
-   * {@inheritDoc}
-   */
   @Override
   public void clear() {
     this.cacheMap.clear();
   }
 
-  /**
-   * {@inheritDoc}
-   */
   @Override
   public String getId() {
     return this.id;
   }
 
-  /**
-   * {@inheritDoc}
-   */
   @Override
   public Object getObject(Object key) {
     return this.cacheMap.get(key);
   }
 
-  /**
-   * {@inheritDoc}
-   */
   @Override
   public ReadWriteLock getReadWriteLock() {
     return this.readWriteLock;
   }
 
-  /**
-   * {@inheritDoc}
-   */
   @Override
   public int getSize() {
     return this.cacheMap.size();
   }
 
-  /**
-   * {@inheritDoc}
-   */
   @Override
   public void putObject(Object key, Object value) {
     if (value != null) {
@@ -116,17 +90,11 @@ public abstract class AbstractHazelcastCache implements Cache {
     }
   }
 
-  /**
-   * {@inheritDoc}
-   */
   @Override
   public Object removeObject(Object key) {
     return this.cacheMap.remove(key);
   }
 
-  /**
-   * {@inheritDoc}
-   */
   @Override
   public boolean equals(Object obj) {
     if (this == obj) {
@@ -143,17 +111,11 @@ public abstract class AbstractHazelcastCache implements Cache {
     return this.id.equals(otherCache.getId());
   }
 
-  /**
-   * {@inheritDoc}
-   */
   @Override
   public int hashCode() {
     return this.id.hashCode();
   }
 
-  /**
-   * {@inheritDoc}
-   */
   @Override
   public String toString() {
     return "Hazelcast {" + this.id + "}";
