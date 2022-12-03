@@ -22,8 +22,6 @@ import java.util.concurrent.locks.ReadWriteLock;
 
 /**
  * The Class DummyReadWriteLock.
- *
- * @author Iwao AVE!
  */
 class DummyReadWriteLock implements ReadWriteLock {
 

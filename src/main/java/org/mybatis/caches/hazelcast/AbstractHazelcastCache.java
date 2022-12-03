@@ -23,8 +23,6 @@ import org.apache.ibatis.cache.Cache;
 
 /**
  * The Class AbstractHazelcastCache.
- *
- * @author Simone Tripodi
  */
 public abstract class AbstractHazelcastCache implements Cache {
 
