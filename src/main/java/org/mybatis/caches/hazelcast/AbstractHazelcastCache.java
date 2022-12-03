@@ -15,7 +15,7 @@
  */
 package org.mybatis.caches.hazelcast;
 
-import com.hazelcast.map.IMap;
+import com.hazelcast.core.IMap;
 
 import java.util.concurrent.locks.ReadWriteLock;
 
