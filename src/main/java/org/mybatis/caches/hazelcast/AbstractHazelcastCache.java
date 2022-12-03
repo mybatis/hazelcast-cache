@@ -26,19 +26,13 @@ import org.apache.ibatis.cache.Cache;
  */
 public abstract class AbstractHazelcastCache implements Cache {
 
-  /**
-   * The {@code ReadWriteLock}.
-   */
+  /** The {@code ReadWriteLock}. */
   protected final ReadWriteLock readWriteLock = new DummyReadWriteLock();
 
-  /**
-   * The cache id.
-   */
+  /** The cache id. */
   protected final String id;
 
-  /**
-   * The cache map reference.
-   */
+  /** The cache map reference. */
   protected final IMap<Object, Object> cacheMap;
 
   /**
