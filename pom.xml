@@ -62,14 +62,14 @@
         <findbugs.onlyAnalyze>org.mybatis.caches.hazelcast.*</findbugs.onlyAnalyze>
         <gcu.product>Cache</gcu.product>
 
-        <hazelcast.version>5.2.1</hazelcast.version>
+        <hazelcast.version>5.0.4</hazelcast.version>
         <junit.version>5.9.1</junit.version>
         <mybatis.version>3.5.11</mybatis.version>
         <module.name>org.mybatis.caches.hazelcast</module.name>
 
         <!-- Note: we are disabling auto discovery so we have copied in full the hazelcast-default.xml and set auto discovery to false due to issue on ubuntu with azure even though its disabled -->
 
-        <argLine>-Djdk.attach.allowAttachSelf -Dhazelcast.config=${project.basedir}/src/test/resources/hazelcast-default.xml -Dhazelcast.security.recommendations -Dhz.jet.enabled=true --add-modules java.se --add-exports java.base/jdk.internal.ref=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens java.management/sun.management=ALL-UNNAMED --add-opens jdk.management/com.sun.management.internal=ALL-UNNAMED</argLine>
+        <argLine>-Djdk.attach.allowAttachSelf -Dhazelcast.security.recommendations -Dhz.jet.enabled=true --add-modules java.se --add-exports java.base/jdk.internal.ref=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens java.management/sun.management=ALL-UNNAMED --add-opens jdk.management/com.sun.management.internal=ALL-UNNAMED</argLine>
 
         <!-- Reproducible Builds -->
         <project.build.outputTimestamp>1670038089</project.build.outputTimestamp>
