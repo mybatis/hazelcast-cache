@@ -32,7 +32,7 @@
 
   <name>mybatis-hazelcast</name>
   <description>Hazelcast support for MyBatis Cache</description>
-  <url>http://www.mybatis.org/caches/hazelcast/</url>
+  <url>https://mybatis.org/hazelcast-cache/</url>
 
   <scm>
     <connection>scm:git:ssh://git@github.com/mybatis/hazelcast-cache.git</connection>
@@ -75,7 +75,7 @@
   </properties>
 
   <dependencies>
-    <!-- | Provided dependencies -->
+    <!-- Provided dependencies -->
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis</artifactId>
@@ -83,7 +83,7 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- | compile dependencies -->
+    <!-- compile dependencies -->
     <dependency>
       <groupId>com.hazelcast</groupId>
       <artifactId>hazelcast</artifactId>
@@ -91,7 +91,7 @@
       <scope>compile</scope>
     </dependency>
 
-    <!-- | test dependencies -->
+    <!-- test dependencies -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
