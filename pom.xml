@@ -63,7 +63,7 @@
 
     <hazelcast.version>5.3.6</hazelcast.version>
     <junit.version>5.10.2</junit.version>
-    <mybatis.version>3.5.15</mybatis.version>
+    <mybatis.version>3.5.16</mybatis.version>
     <module.name>org.mybatis.caches.hazelcast</module.name>
 
     <!-- Note: we are disabling auto discovery so we have copied in full the hazelcast-default.xml and set auto discovery to false due to issue on ubuntu with azure even though its disabled -->
