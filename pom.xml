@@ -28,7 +28,7 @@
 
   <groupId>org.mybatis.caches</groupId>
   <artifactId>mybatis-hazelcast</artifactId>
-  <version>1.3.2-SNAPSHOT</version>
+  <version>1.4.0-SNAPSHOT</version>
 
   <name>mybatis-hazelcast</name>
   <description>Hazelcast support for MyBatis Cache</description>
