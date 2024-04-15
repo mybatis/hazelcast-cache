@@ -28,7 +28,7 @@
 
   <groupId>org.mybatis.caches</groupId>
   <artifactId>mybatis-hazelcast</artifactId>
-  <version>1.3.1-SNAPSHOT</version>
+  <version>1.3.1</version>
 
   <name>mybatis-hazelcast</name>
   <description>Hazelcast support for MyBatis Cache</description>
@@ -37,7 +37,7 @@
   <scm>
     <connection>scm:git:ssh://git@github.com/mybatis/hazelcast-cache.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/mybatis/hazelcast-cache.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>mybatis-hazelcast-1.3.1</tag>
     <url>http://github.com/mybatis/hazelcast-cache/</url>
   </scm>
   <issueManagement>
@@ -79,7 +79,7 @@
     <argLine>-Dhazelcast.config=${project.basedir}/src/test/resources/hazelcast-default.xml -Dhazelcast.client.config=${project.basedir}/src/test/resources/hazelcast-client-default.xml -Dhazelcast.security.recommendations -Dhz.jet.enabled=true --add-modules java.se --add-exports java.base/jdk.internal.ref=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens java.management/sun.management=ALL-UNNAMED --add-opens jdk.management/com.sun.management.internal=ALL-UNNAMED</argLine>
 
     <!-- Reproducible Builds -->
-    <project.build.outputTimestamp>1670038089</project.build.outputTimestamp>
+    <project.build.outputTimestamp>1713223598</project.build.outputTimestamp>
   </properties>
 
   <dependencies>
