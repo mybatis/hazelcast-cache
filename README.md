@@ -35,6 +35,7 @@ Internally this is calling "HazelcastClient.newHazelcastClient()". Also see http
 
 Support Hazelcast
 -----------------
-mybatis-hazelcast 1.1.x supports hazelcast 3
-mybatis-hazelcast 1.2.x supports hazelcast 4
-mybatis-hazelcast 1.3.x supports hazelcast 5
+mybatis-hazelcast 1.1.x supports hazelcast 3 - end of life (jdk 8)
+mybatis-hazelcast 1.2.x supports hazelcast 4 - end of life (jdk 8)
+mybatis-hazelcast 1.3.x supports hazelcast 5 until 5.3.x (jdk 8)
+mybatis-hazelcast 1.4.x supports hazelcast 5.4.x on (jdk 17)
