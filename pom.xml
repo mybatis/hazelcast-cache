@@ -67,7 +67,7 @@
     <gcu.product>Cache</gcu.product>
 
     <!-- Versions -->
-    <hazelcast.version>5.4.0</hazelcast.version>
+    <hazelcast.version>5.5.0</hazelcast.version>
     <junit.version>5.10.3</junit.version>
     <mybatis.version>3.5.16</mybatis.version>
 
