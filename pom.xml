@@ -69,7 +69,7 @@
     <!-- Versions -->
     <hazelcast.version>5.5.0</hazelcast.version>
     <junit.version>5.11.4</junit.version>
-    <mybatis.version>3.5.18</mybatis.version>
+    <mybatis.version>3.5.19</mybatis.version>
 
     <!-- Automatic Module Name -->
     <module.name>org.mybatis.caches.hazelcast</module.name>
