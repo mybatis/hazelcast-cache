@@ -68,7 +68,7 @@
 
     <!-- Versions -->
     <hazelcast.version>5.6.0</hazelcast.version>
-    <junit.version>6.0.1</junit.version>
+    <junit.version>6.0.2</junit.version>
     <mybatis.version>3.5.19</mybatis.version>
 
     <!-- Automatic Module Name -->
