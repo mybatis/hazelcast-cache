@@ -29,7 +29,7 @@
           <ul class="breadcrumb">
         <li id="publishDate">Last Published: 28 Jun 2026<span class="divider">|</span>
 </li>
-          <li id="projectVersion">Version: 1.4.1</li>
+          <li id="projectVersion">Version: 1.4.2-SNAPSHOT</li>
           </ul>
         </div>
       </header>
@@ -57,7 +57,6 @@
       <li><a href="parent-updates-report.html">Parent Updates Report</a></li>
       <li><a href="plugin-updates-report.html">Plugin Updates Report</a></li>
       <li><a href="property-updates-report.html">Property Updates Report</a></li>
-      <li><a href="jacoco/index.html">JaCoCo</a></li>
      </ul></li>
   </ul>
           </nav>
@@ -91,8 +90,7 @@ function toggleDisplay(elementId) {
 </script>
 <section><a id="Surefire_Report"></a>
 <h1>Surefire Report</h1><section><a id="Summary"></a>
-<h2>Summary</h2>
-<p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p><br />
+<h2>Summary</h2><br />
 <table class="table table-striped">
 <tr class="a">
 <th>Tests</th>
@@ -102,100 +100,13 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td>8</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>100%</td>
-<td>88.16 s</td></tr></table><br />
-<p>Note: failures are anticipated and checked for with assertions while errors are unanticipated.</p><br /></section><section><a id="Package_List"></a>
-<h2>Package List</h2>
-<p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p><br />
-<table class="table table-striped">
-<tr class="a">
-<th>Package</th>
-<th>Tests</th>
-<th>Errors</th>
-<th>Failures</th>
-<th>Skipped</th>
-<th>Success Rate</th>
-<th>Time</th></tr>
-<tr class="b">
-<td><a href="#org.mybatis.caches.hazelcast">org.mybatis.caches.hazelcast</a></td>
-<td>8</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-<td>88.16 s</td></tr></table><br />
-<p>Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.</p><section><a id="org.mybatis.caches.hazelcast"></a>
-<h3>org.mybatis.caches.hazelcast</h3>
-<table class="table table-striped">
-<tr class="a">
-<th>-</th>
-<th>Class</th>
-<th>Tests</th>
-<th>Errors</th>
-<th>Failures</th>
-<th>Skipped</th>
-<th>Success Rate</th>
-<th>Time</th></tr>
-<tr class="b">
-<td><a href="#org.mybatis.caches.hazelcast.HazelCastCacheTest"><img src="images/icon_success_sml.gif" /></a></td>
-<td><a href="#org.mybatis.caches.hazelcast.HazelCastCacheTest">HazelCastCacheTest</a></td>
-<td>4</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-<td>6.294 s</td></tr>
-<tr class="a">
-<td><a href="#org.mybatis.caches.hazelcast.HazelCastClientCacheTest"><img src="images/icon_success_sml.gif" /></a></td>
-<td><a href="#org.mybatis.caches.hazelcast.HazelCastClientCacheTest">HazelCastClientCacheTest</a></td>
-<td>4</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-<td>81.86 s</td></tr></table></section><br /></section><section><a id="Test_Cases"></a>
-<h2>Test Cases</h2>
-<p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p><section><a id="org.mybatis.caches.hazelcast.HazelCastCacheTest"></a>
-<h3>HazelCastCacheTest</h3>
-<table class="table table-striped">
-<tr class="a">
-<td><img src="images/icon_success_sml.gif" /></td>
-<td><a id="TC_org.mybatis.caches.hazelcast.HazelCastCacheTest.shouldFlushAllItemsOnDemand"></a>shouldFlushAllItemsOnDemand</td>
-<td>1.827 s</td></tr>
-<tr class="b">
-<td><img src="images/icon_success_sml.gif" /></td>
-<td><a id="TC_org.mybatis.caches.hazelcast.HazelCastCacheTest.shouldRemoveItemOnDemand"></a>shouldRemoveItemOnDemand</td>
-<td>0.008 s</td></tr>
-<tr class="a">
-<td><img src="images/icon_success_sml.gif" /></td>
-<td><a id="TC_org.mybatis.caches.hazelcast.HazelCastCacheTest.shouldDemonstrateCopiesAreEqual"></a>shouldDemonstrateCopiesAreEqual</td>
-<td>0.111 s</td></tr>
-<tr class="b">
-<td><img src="images/icon_success_sml.gif" /></td>
-<td><a id="TC_org.mybatis.caches.hazelcast.HazelCastCacheTest.shouldDemonstrateHowAllObjectsAreKept"></a>shouldDemonstrateHowAllObjectsAreKept</td>
-<td>4.325 s</td></tr></table></section><section><a id="org.mybatis.caches.hazelcast.HazelCastClientCacheTest"></a>
-<h3>HazelCastClientCacheTest</h3>
-<table class="table table-striped">
-<tr class="a">
-<td><img src="images/icon_success_sml.gif" /></td>
-<td><a id="TC_org.mybatis.caches.hazelcast.HazelCastClientCacheTest.shouldFlushAllItemsOnDemand"></a>shouldFlushAllItemsOnDemand</td>
-<td>0.810 s</td></tr>
-<tr class="b">
-<td><img src="images/icon_success_sml.gif" /></td>
-<td><a id="TC_org.mybatis.caches.hazelcast.HazelCastClientCacheTest.shouldRemoveItemOnDemand"></a>shouldRemoveItemOnDemand</td>
-<td>0.012 s</td></tr>
-<tr class="a">
-<td><img src="images/icon_success_sml.gif" /></td>
-<td><a id="TC_org.mybatis.caches.hazelcast.HazelCastClientCacheTest.shouldDemonstrateCopiesAreEqual"></a>shouldDemonstrateCopiesAreEqual</td>
-<td>1.603 s</td></tr>
-<tr class="b">
-<td><img src="images/icon_success_sml.gif" /></td>
-<td><a id="TC_org.mybatis.caches.hazelcast.HazelCastClientCacheTest.shouldDemonstrateHowAllObjectsAreKept"></a>shouldDemonstrateHowAllObjectsAreKept</td>
-<td>79.43 s</td></tr></table></section><br /></section></section>        </main>
+<td>0%</td>
+<td>0 s</td></tr></table><br />
+<p>Note: failures are anticipated and checked for with assertions while errors are unanticipated.</p><br /></section></section>        </main>
       </div>
     </div>
     <hr/>
