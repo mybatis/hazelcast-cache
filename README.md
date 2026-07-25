@@ -14,9 +14,6 @@ MyBatis-Hazelcast extension Hazelcast support for MyBatis Cache.
 Essentials
 ----------
 
-* [See the docs](https://mybatis.org/hazelcast-cache/)
-
-
 This module contains two cache implementations utilizing Hazelcast: 
 
 
