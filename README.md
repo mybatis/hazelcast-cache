@@ -4,6 +4,7 @@ MyBatis Hazelcast Extension
 [![Java CI](https://github.com/mybatis/hazelcast-cache/actions/workflows/ci.yaml/badge.svg)](https://github.com/mybatis/hazelcast-cache/actions/workflows/ci.yaml)
 [![Coverage Status](https://coveralls.io/repos/mybatis/hazelcast-cache/badge.svg?branch=master&service=github)](https://coveralls.io/github/mybatis/hazelcast-cache?branch=master)
 [![Maven Central](https://img.shields.io/maven-central/v/org.mybatis.caches/mybatis-hazelcast?logo=apachemaven)](https://central.sonatype.com/artifact/org.mybatis.caches/mybatis-hazelcast)
+[![Docs](https://img.shields.io/badge/docs-mybatis.org-blue?logo=github)](https://mybatis.org/hazelcast-cache/)
 [![License](https://img.shields.io/:license-apache-brightgreen.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 ![mybatis-logo](https://mybatis.org/images/mybatis-logo.png)
