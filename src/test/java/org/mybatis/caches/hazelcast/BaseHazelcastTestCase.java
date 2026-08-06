@@ -16,8 +16,10 @@
 package org.mybatis.caches.hazelcast;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.apache.ibatis.cache.Cache;
 import org.junit.jupiter.api.Test;
@@ -67,6 +69,67 @@ abstract public class BaseHazelcastTestCase {
     cache.clear();
     assertNull(cache.getObject(0));
     assertNull(cache.getObject(4));
+  }
+
+  @Test
+  public void shouldPutNullValueRemovesExistingKey() {
+    Cache cache = newCache();
+    cache.putObject(0, 0);
+    assertNotNull(cache.getObject(0));
+    cache.putObject(0, null);
+    assertNull(cache.getObject(0));
+  }
+
+  @Test
+  public void shouldPutNullValueWithAbsentKeyDoesNothing() {
+    Cache cache = newCache();
+    cache.putObject(0, null);
+    assertNull(cache.getObject(0));
+    assertEquals(0, cache.getSize());
+  }
+
+  @Test
+  public void shouldReturnCorrectId() {
+    Cache cache = newCache();
+    assertNotNull(cache.getId());
+  }
+
+  @Test
+  public void shouldBeEqualToItself() {
+    Cache cache = newCache();
+    assertTrue(cache.equals(cache));
+  }
+
+  @Test
+  public void shouldNotBeEqualToNull() {
+    Cache cache = newCache();
+    assertFalse(cache.equals(null));
+  }
+
+  @Test
+  public void shouldNotBeEqualToNonCacheObject() {
+    Cache cache = newCache();
+    assertFalse(cache.equals("not a cache"));
+  }
+
+  @Test
+  public void shouldBeEqualToCacheWithSameId() {
+    Cache cache1 = newCache();
+    Cache cache2 = newCache();
+    assertTrue(cache1.equals(cache2));
+  }
+
+  @Test
+  public void shouldHaveConsistentHashCode() {
+    Cache cache = newCache();
+    assertEquals(cache.hashCode(), cache.hashCode());
+  }
+
+  @Test
+  public void shouldReturnMeaningfulToString() {
+    Cache cache = newCache();
+    assertNotNull(cache.toString());
+    assertTrue(cache.toString().contains(DEFAULT_ID));
   }
 
 }

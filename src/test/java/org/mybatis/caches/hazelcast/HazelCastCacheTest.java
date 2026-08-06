@@ -15,13 +15,22 @@
  */
 package org.mybatis.caches.hazelcast;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import org.apache.ibatis.cache.Cache;
+import org.junit.jupiter.api.Test;
 
 public class HazelCastCacheTest extends BaseHazelcastTestCase {
 
   @Override
   protected Cache newCache() {
     return new HazelcastCache(DEFAULT_ID);
+  }
+
+  @Test
+  public void shouldReturnReadWriteLock() {
+    Cache cache = newCache();
+    assertNotNull(cache.getReadWriteLock());
   }
 
 }
